@@ -1,0 +1,241 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+    
+    
+input {
+    outline: none;
+    border: none;
+    background: transparent;
+}
+    
+.navbar{
+    width: 100%;
+    margin: auto;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    width: 150px;
+    cursor: pointer;
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(rest.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.signup-box {
+    position: absolute;
+    top: 28%;
+    left: 50%;
+    width: 350px;
+    padding: 20px;
+    transform: translate(-50%, -21%);
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}
+.signup-box h2 {
+    margin: 0 0 2px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+}
+.check{
+    color: #fff;
+    font-size: medium;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.signup-box .user-box {
+    position: relative;
+    margin: 10px 10px;
+}
+    
+.signup-box .user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    color: #fff;
+    transition: 500ms;
+    font-size: 16px;
+    pointer-events: none;
+}
+    
+.signup-box .user-box .input {
+    width: 100%;
+    padding: 10px 0;
+    color: #fff;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #fff;
+}
+    
+.input:active ~ label {
+    top: -20px;
+    color: #D7A12B;
+    font-size: 16px;
+}
+    
+.input:focus ~ label {
+    top: -20px;
+    color: #D7A12B;
+    font-size: 16px;
+}
+    
+.input:valid ~ label  {
+    top: -20px;
+    color: #D7A12B;
+    font-size: 16px;
+}
+    
+    
+.signup-box form a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: all .5s;
+    margin-top: 40px;
+    letter-spacing: 4px;
+    color: #D7A12B;
+    margin: 30px 10px;
+}
+    
+.signup-box a:hover {
+    background-color: #D7A12B;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #D7A12B,
+                0 0 25px #D7A12B,
+                0 0 50px #D7A12B,
+                0 0 100px #D7A12B;
+}
+.signup-box a span {
+    position: absolute;
+    display: block;
+}
+  
+.terms button {
+    text-align: center;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    font-family: Georgia, 'Times New Roman', Times, sans-serif;
+    font-weight: bold;
+    border-style: none;
+      
+}
+@keyframes btnAnimA {
+    0% {
+        left: -100%;
+    }
+    50% {
+        left: 100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+    .signup-box a span:nth-child(1) {
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #D7A12B);
+      animation: btnAnimA 1500ms linear infinite;
+      /* animation-delay: 200ms; */
+      animation-fill-mode: backwards;
+      animation-play-state: running;
+    }
+    
+    
+    @keyframes btnAnimB {
+      0% {
+        top: -100%
+      }
+      50% {
+        top: 100%;
+      }
+      100% {
+        top: 100%;
+      }
+    }
+    .signup-box a span:nth-child(2) {
+      top: -100%;
+      right: 0;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(180deg, transparent, #D7A12B);
+      animation: btnAnimB 1500ms linear infinite;
+      animation-delay: 300ms;
+    }
+    
+    
+    @keyframes btnAnimC {
+      0% {
+        right: -100%;
+      }
+      50% {
+        right: 100%;
+      }
+      100% {
+        right: 100%;
+      }
+    }
+    .signup-box a span:nth-child(3) {
+      bottom: 0;
+      right: -100%;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(270deg, transparent, #D7A12B);
+      animation: btnAnimC 1500ms linear infinite;
+      animation-delay: 600ms;
+    }
+    
+    
+    @keyframes btnAnimD {
+      0% {
+        bottom: -100%;
+      }
+      50%,100% {
+        bottom: 100%;
+      }
+    }
+    .signup-box a span:nth-child(4) {
+      left: 0;
+      bottom: -100%;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(360deg, transparent, #D7A12B);
+      animation: btnAnimD 1500ms linear infinite;
+      animation-delay: 900ms;
+    }
+    
+    @media(max-width:1000px){
+      .logo {
+          display:block;
+          margin-right:auto;
+          margin-left:auto;
+      }
+      .banner{
+        flex: 100%;
+        max-width: 100%;
+        width: 100%;
+        height: 900px;
+      }
+      .signup-box{
+          top: 55%;
+      }
+  }
